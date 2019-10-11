@@ -1,2 +1,2 @@
 # ivanhb
-A general profile repository of my public data
+A general profile repository containing all my personal public data/info
