@@ -1,0 +1,108 @@
+{
+  "items": [
+    {
+      "id":"force2019",
+      "name": "FORCE2019 - the Future Of Research Communications and e-Scholarships",
+      "location": "Edinburgh, Scotland",
+      "date": "15/10/2019-17/10/2019",
+      "contribution": "Presenting: 'COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations', and joining the panel: 'Citations: how open do we want them?'",
+      "description": "The FORCE11 annual conference is a different kind of meeting, where stakeholders come together – or scrummage – for an open discussion, on an even playing field, to talk about changing the ways scholarly and scientific information is communicated, shared and used. Researchers, publishers, librarians, computer scientists, informaticians, funders, educators, citizens, and others attend the FORCE11 meeting with a view to supporting the realisation of promising new ideas and identifying new potential collaborators.",
+      "extra": [
+        {"type":"presentation","label":"COCI presentation","value":"https://ivanhb.github.io/phd/activity/force11-2019/coci_presentation.pdf"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "project": "phd",
+      "include_in_webpage": 1
+    },
+    {
+      "id":"issi2019",
+      "name": "ISSI 2019 - 17th international conference on  scientometrics & informetrics",
+      "location": "Rome, Italy",
+      "date": "02/09/2019-05/09/2019",
+      "contribution": "Hosting the 'Workshop on Open Citations: Opportunities and Ongoing Developments' and presenting OpenCitations and its API service, along with the participation into the ISSI doctoral forum.",
+      "description": "The ISSI 2019 Conference will provide an international forum for scientists, research managers and administrators, as well as information and communication related professionals to share research and debate the advancements of informetric and scientometric theory and applications.",
+      "extra": [
+        {"type":"presentation","label":"Doctoral forum presentation","value":"https://ivanhb.github.io/phd/activity/issi2019(roma)/Doctoral%20forum%20Ph.D.%20presentation.pdf"},
+        {"type":"presentation","label":"OpenCitations infrastructure presentation","value":"https://ivanhb.github.io/phd/activity/issi2019(roma)/OpenCitations,%20an%20infrastructure%20for%20open%20citation%20data.pdf"},
+        {"type":"presentation","label":"OpenCitations and Crossref APIs presentation","value":"https://ivanhb.github.io/phd/activity/issi2019(roma)/A%20tutorial%20for%20OpenCitations%20and%20Crossref%20API.pdf"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "project": "phd",
+      "include_in_webpage": 1
+    },
+    {
+      "id":"isws2019",
+      "name": "ISWS 2019 - International Semantic Web Research Summer School",
+      "location": "Bertinoro, Italy",
+      "date": "30/06/2019-06/07/2019",
+      "contribution": "Presenting a poster and attending as a Student of the Summer School",
+      "description": "ISWS is a full immersion, super intensive one-week experience including lectures and keynotes from outstanding speakers, a -learning by doing- teamwork program on open research problems, under the guidance of the best scientists in the field, with whom you will co-author a white paper of high potential impact",
+      "extra": [
+        {"type":"presentation","label":"The poster","value":"https://ivanhb.github.io/phd/activity/isws(bertinoro)/poster_ivanhb.pdf"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "project": "phd",
+      "include_in_webpage": 1
+    },
+    {
+      "id":"euram2019",
+      "name": "EURAM 2019",
+      "location": "Lisbon, Portugal",
+      "date": "25/06/2019-28/06/2019",
+      "contribution": "Hosting a Symposium: CATARSI: Cleaning, analyzing and visualizing techniques for textual data. An interactive workshop",
+      "description": "It aims at advancing the academic discipline of management in Europe. With members from 49 countries in Europe and beyond, EURAM has a high degree of diversity and provides its members with opportunities to enrich debates over a variety of research management themes and traditions. In this workshop we presented MITAO, an automatic text analysis tool",
+      "extra": [
+        {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "project": "catarsi",
+      "include_in_webpage": 1
+    },
+    {
+      "id":"wikicite2018",
+      "name": "WikiCite 2018",
+      "location": "Berkeley, California, USA",
+      "date": "27/11/2018-29/11/2018",
+      "contribution": "Presenting a talk about: OSCAR and LUCINDA with Wikidata",
+      "description": "WikiCite 2018 is a 3-day conference, summit, and hack day dedicated to the vision of creating an open repository of bibliographic data to support the citation and fact-checking needs of Wikimedia projects, and possibly, to serve as an open infrastructure for research, education, and information quality across the web.",
+      "extra": [
+        {"type":"webpage","label":"Conference website","value":"https://meta.wikimedia.org/wiki/WikiCite_2018"},
+        {"type":"presentation","label":"View the presentation","value":"https://docs.google.com/presentation/d/1lM8HDFUytUEQ2vu603yJ0R1T8qTdsx8q50o5vP9y2so/edit?usp=sharing"},
+        {"type":"special","label":"Lucinda demo for Wikidata","value":"https://opencitations.github.io/lucinda/example/wikidata/browser.html?browse=Q30536251"},
+        {"type":"special","label":"OSCAR demo for Wikidata","value":"https://opencitations.github.io/oscar/example/v2/wikidata.html"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "project": "phd",
+      "include_in_webpage": 1
+    },
+    {
+      "id":"ocworkshop2018",
+      "name": "Workshop on Open Citations",
+      "location": "Bologna, Italy",
+      "date": "03/09/2018-05/09/2018",
+      "contribution": "Member of workshop staff",
+      "description": "About 500 million open bibliographic citations are available on the web. We invite to this workshop researchers, scholarly publishers, funders, policy makers, and opening citations advocates, interested in the widespread adoption of practises for creation, reuse and improvement of open citation data.",
+      "extra": [
+        {"type":"webpage","label":"Workshop website","value":"https://workshop-oc.github.io/index.html"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "project": "opencitations",
+      "include_in_webpage": 1
+    },
+    {
+      "id":"webconf2018",
+      "name": "The Web Conference",
+      "location": "Lyon, France",
+      "date": "23/04/2018-27/04/2018",
+      "contribution": "Presenting OSCAR at the SAVE-SD workshop",
+      "description": "The Web Conference (formerly www conference) is a yearly international conference on the topic of the future directions of the World Wide Web. The main goal of this workshop I have attended, is bringing together publishers, companies and researchers from different fields (including Document and Knowledge Engineering, Semantic Web, Natural Language Processing, Scholarly Communication, Bibliometrics, and Human-Computer Interaction) in order to bridge the gap between the theoretical/academic and practical/industrial aspects with regards to scholarly data.",
+      "extra": [
+        {"type":"webpage","label":"Workshop website","value":"https://save-sd.github.io/2018/index.html"},
+        {"type":"git_repository","label":"OSCAR repository","value":"https://github.com/opencitations/oscar"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "project": "opencitations",
+      "include_in_webpage": 1
+    }
+  ]
+}
