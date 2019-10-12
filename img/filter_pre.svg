@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="147px" viewBox="0 0 73 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="filter-preview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-7.000000, 3.000000)" fill="#FFFFFF">
+            <path id="Line" d="M65,131.456233 L73.8210612,115.774347 L75.0467143,113.595408 L79.4045919,116.046714 L78.1789388,118.225653 L64.6789388,142.225653 C63.7231787,143.924782 61.2768213,143.924782 60.3210612,142.225653 L46.8210612,118.225653 L45.5954081,116.046714 L49.9532857,113.595408 L51.1789388,115.774347 L60,131.456233 L60,117 L60,0 L60,-2.5 L65,-2.5 L65,0 L65,117 L65,131.456233 Z" fill-rule="nonzero"></path>
+            <text id="Filter" transform="translate(25.500000, 54.500000) rotate(270.000000) translate(-25.500000, -54.500000) " font-family="Georgia" font-size="45" font-weight="normal">
+                <tspan x="-29" y="70">Filter</tspan>
+            </text>
+            <path d="M14.5,117.5 L36,117.5" id="Line-2" stroke="#FFFFFF" stroke-width="4" stroke-linecap="square"></path>
+            <path d="M14.5,123.5 L36,123.5" id="Line-2" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="square"></path>
+            <path d="M14.5,135.5 L36,135.5" id="Line-2" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="square"></path>
+            <path d="M14.5,129.5 L36,129.5" id="Line-2" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square"></path>
+            <path d="M14.5,141.5 L36,141.5" id="Line-2" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>
