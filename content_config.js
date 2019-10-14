@@ -5,13 +5,13 @@ var my_config = {
       'section_title': "Working report",
       'section_type': 'report',
       'section_class': '',
-      'url': 'https://ivanhb.github.io/data/index/diary.json',
+      'url': 'https://ivanhb.github.io/edu/index/diary.json',
       'handler': report_handler,
     }
   ],
   'profile_section': {
     'id': 'profile',
-    'source': 'https://ivanhb.github.io/data/index/bio.json',
+    'source': 'https://ivanhb.github.io/doc/personal/bio.json',
     'section_title': 'About me',
     'section_type': 'profile',
     'section_class': 'profile',
@@ -25,7 +25,7 @@ var my_config = {
   'section':[
       {
         'id': 'projects',
-        'source': 'https://ivanhb.github.io/data/index/project.json',
+        'source': 'https://ivanhb.github.io/edu/index/project.json',
         'section_title': 'Projects',
         'section_type': 'gen-sec',
         'section_class': 'project',
@@ -44,7 +44,7 @@ var my_config = {
       },
       {
         'id': 'activities',
-        'source': 'https://ivanhb.github.io/data/index/activity.json',
+        'source': 'https://ivanhb.github.io/edu/index/activity.json',
         'section_title': 'Activities',
         'section_type': 'gen-sec',
         'section_class': 'activity',
@@ -69,7 +69,7 @@ var my_config = {
       },
       {
         'id': 'publications',
-        'source': 'https://ivanhb.github.io/data/index/publication.json',
+        'source': 'https://ivanhb.github.io/edu/index/publication.json',
         'section_title': 'Publications',
         'section_type': 'gen-sec',
         'section_class': 'publication',
@@ -89,7 +89,7 @@ var my_config = {
   },
   'request': {
     'workdiary':{
-      'link': "https://ivanhb.github.io/data/index/diary.json",
+      'link': "https://ivanhb.github.io/edu/index/diary.json",
       'query': {
           'last': last_diary
       }
@@ -186,14 +186,8 @@ function normalize_date(d) {
   return str_date;
 }
 function normalize_md_to_html(str_md){
-  var ex = {
-    "description": `I'm Ivan, a computer scientist and currently a Ph.D. student at the University of Bologna. My Ph.D. studies focus on the integration of Semantic web technologies in the Science Of Science research domain for the analysis of Humanities field publications ([check my Ph.D. poster](https://ivanhb.github.io/phd/activity/isws(bertinoro)/poster_ivanhb.pdf)).
-I am working at [The Department of Classic Philology and Italian Studies (FICLIT)](http://www.ficlit.unibo.it/it) and at the [Digital Humanities Advanced Research Centre (DHARC)](https://centri.unibo.it/dharc/en).\n\n
-I was born in Israel, my father is arab and my mother is Italian. Luckily, I gained both as mother languages and I like to maintain both the cultures active in my lifestyle. After my high school graduation at the age of 18, I moved to Italy and to the University of Bologna to study computer science, and I have successfully completed my bachelor and master degree.\n\nLast year I worked with David Shotton from the University of Oxford, and Silvio Peroni from the University of Bologna, as a research fellow for the [OpenCitations project](http://opencitations.net/): a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. My main contribution was based on studying and developing new data-visualization and  data-querying applications for RDF datasets.`,
-  };
   var md = new Remarkable();
-  var html_str = md.render(ex["description"]);
-  //console.log(html_str);
+  var html_str = md.render(str_md);
   return html_str;
 }
 
@@ -223,8 +217,6 @@ function last_diary(diary_obj) {
   }
   return -1;
 }
-
-
 
 
 function report_handler(an_item) {

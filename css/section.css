@@ -131,6 +131,7 @@ a:hover{
 }
 #aboutme_section_content{
   border-top: solid 8px;
+  border-radius: 1px 5px;
   margin-left: 10%;
   padding-top: 5%;
   color: white;
@@ -274,6 +275,7 @@ a:hover{
  position: relative;
  bottom: 50px;
  z-index: -1;
+ border-radius: 10px 10px 10px 10px;
 }
 
 #sections{
