@@ -45,7 +45,7 @@ function build_dynamic_section(dynamic_sec_obj) {
             for (var j = 0; j < normalized_item["content"].length; j++) {
               str_html_content = str_html_content + "<li>"+normalized_item["content"][j]+"</li>";
             }
-            str_html_content = str_html_content + "<div id='full_text'><a href='"+an_item["link"]+"'>Read report</a></div></div>";
+            str_html_content = str_html_content + "<li id='full_text'><a href='"+an_item["link"]+"'>Read the full report</a></li></div>";
             //console.log(str_html_content);
             $("#"+id+" .body")[0].innerHTML = $("#"+id+" .body")[0].innerHTML + str_html_content;
 

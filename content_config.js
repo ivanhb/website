@@ -1,8 +1,19 @@
+var layout_config = {
+  "nav_menu": {
+    "projects": "layout/projects.html",
+    "activities": "layout/activities.html",
+    "publications": "layout/publications.html"
+  }
+}
+
+
+
 var my_config = {
+  'BASE': "https://ivanhb.github.io/",
   'dynamic_section':[
     {
       'id': 'diary',
-      'section_title': "Working report",
+      'section_title': "",
       'section_type': 'report',
       'section_class': '',
       'url': 'https://ivanhb.github.io/edu/index/diary.json',
