@@ -6,14 +6,14 @@ var sections = (function () {
     if (section == "home") {
       active = "active";
     }
-    var nav_html = '<a class="item '+active+'" href="'+layout_config.website_url+'index.html">Home</a>';
+    var nav_html = '<a class="item '+active+'" href="'+layout_config.homepage+'">Home</a>';
     active = "";
     for (var a_section in layout_config.nav_menu) {
       var sec_obj = layout_config.nav_menu[a_section];
       if (section == a_section) {
         active = "active";
       }
-      nav_html = '<a class="item '+active+'" href="'+layout_config.html_dir+sec_obj.link+'">'+sec_obj.title+'</a>'+ nav_html;
+      nav_html = '<a class="item '+active+'" href="'+layout_config.pages_dir+sec_obj.link+'">'+sec_obj.title+'</a>'+ nav_html;
       active = "";
     }
 
