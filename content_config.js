@@ -1,100 +1,38 @@
+var layout_config = {
+  "homelogo": {link: "https://ivanhb.github.io/data/img/full_logo_vanilla.svg"},
+  "nav_menu": {
+    "projects": {title: "Projects", link: "layout/projects.html"},
+    "activities": {title: "Activities", link: "layout/activities.html"},
+    "publications": {title: "Publications", link: "layout/publications.html"},
+  }
+}
+
+
 var my_config = {
+  'BASE': "https://ivanhb.github.io/",
+  'WEBSITE_BASE': "https://ivanhb.github.io/website/",
+
   'dynamic_section':[
     {
       'id': 'diary',
-      'section_title': "Working report",
-      'section_type': 'report',
-      'section_class': '',
       'url': 'https://ivanhb.github.io/edu/index/diary.json',
       'handler': report_handler,
     }
   ],
-  'profile_section': {
-    'id': 'profile',
-    'source': 'https://ivanhb.github.io/doc/personal/bio.json',
-    'section_title': 'About me',
-    'section_type': 'profile',
-    'section_class': 'profile',
-    'normalize': {
-      'description': normalize_md_to_html,
-    },
-    'layout':{
-      "content": ['[[description]]']
-    }
-  },
   'section':[
       {
         'id': 'projects',
-        'source': 'https://ivanhb.github.io/edu/index/project.json',
-        'section_title': 'Projects',
-        'section_type': 'gen-sec',
-        'section_class': 'project',
-        'normalize': {
-          'achievements': normalize_achievements,
-          'people': normalize_people,
-          'date': date_to_status
-        },
-        //define the DOM layout pattern of each entity
-        'layout':{
-          "title": ['[[name]]'],
-          "subtitle": ['[[sub_name]] <p>Status: [[date]]</p>'],
-          "content": ['[[description]]<p>[[people]]</p><p>[[achievements]]</p>'],
-          "extra": ['[[extra]]']
-        }
+        'source': 'https://ivanhb.github.io/edu/index/project.json'
       },
       {
         'id': 'activities',
-        'source': 'https://ivanhb.github.io/edu/index/activity.json',
-        'section_title': 'Activities',
-        'section_type': 'gen-sec',
-        'section_class': 'activity',
-        'normalize': {
-          'date': normalize_date_range,
-        },
-        //define the DOM layout pattern of each entity
-        'layout':{
-          "title": [
-            '<div class="section_label">Event:&ensp;</div>[[name]]'
-          ],
-          "subtitle": [
-            '<div class="section_label">Location:&ensp;</div>[[location]]',
-            '<div class="section_label">Date:&ensp;</div>[[date]]',
-            '<div class="section_label">Contribution:&ensp;</div>[[contribution]]'
-          ],
-          "content": [
-            '<div class="section_label"></div>[[description]]'
-          ],
-          "extra": ['[[extra]]']
-        }
+        'source': 'https://ivanhb.github.io/edu/index/activity.json'
       },
       {
         'id': 'publications',
-        'source': 'https://ivanhb.github.io/edu/index/publication.json',
-        'section_title': 'Publications',
-        'section_type': 'gen-sec',
-        'section_class': 'publication',
-        'normalize': {
-          'date': normalize_date,
-        },
-        //define the DOM layout pattern of each entity
-        'layout':{
-          "title": ['[[reference]]'],
-          "subtitle": ['<a href="[[link]]">[[link]]</a>']
-        }
+        'source': 'https://ivanhb.github.io/edu/index/publication.json'
       }
-  ],
-  'add_filter': true,
-  'section_filter': {
-    'date': {'label':"Date", 'all_label':"All Years", "range":true, "normalize": normalize_filter_date, "normalize_lbl": normalize_filter_date, "data_type": "int"}
-  },
-  'request': {
-    'workdiary':{
-      'link': "https://ivanhb.github.io/edu/index/diary.json",
-      'query': {
-          'last': last_diary
-      }
-    }
-  }
+  ]
 }
 
 
@@ -209,6 +147,95 @@ function normalize_filter_date(val){
   }
 }
 
+function normalize_keywords(elems){
+  var elems_html = "";
+  if (elems != undefined) {
+    for (var i = 0; i < elems.length; i++) {
+      elems_html += "#"+elems[i];
+      if (i < elems.length -1) {
+        elems_html += "<i class='circle icon'></i>";
+      }
+    }
+  }
+  return elems_html;
+}
+
+function normalize_attached(elems){
+
+  var elems_html = "";
+  if (elems != undefined) {
+      for (var i = 0; i < elems.length; i++) {
+        var elem_obj = elems[i];
+
+        var logo_class = "";
+        switch (elem_obj["type"]) {
+         case "git_repository":
+            logo_class = "github alternate icon";
+            break;
+         case "presentation":
+            logo_class = "eye icon";
+            break;
+         case "special":
+            logo_class = "star icon";
+            break;
+         case "webpage":
+            logo_class = "linkify icon";
+            break;
+         case "document":
+            logo_class = "file outline icon";
+            break;
+        }
+
+        elems_html += '<div class="item-link"><a target="_blank"  href="'+elem_obj["value"]+'"><i class="'+logo_class+'"></i>'+elem_obj["label"]+'</a></div>';
+        if (i < elems.length -1) {
+          elems_html += '<div class="separator"><i class="minus icon"></i></div>';
+        }
+      }
+  }
+  return elems_html;
+}
+
+function normalize_contacts(elems) {
+
+  var elems_html = "";
+  if (elems != undefined) {
+    for (var k_contact in elems) {
+      var obj_contact = elems[k_contact];
+      if ("include_in_webpage" in obj_contact) {
+        if (obj_contact["include_in_webpage"] == 1) {
+
+          var logo_class = "";
+          switch (k_contact) {
+            case "twitter":
+             logo_class = "twitter big icon";
+             break;
+           case "git":
+             logo_class = "github big icon";
+             break;
+           case "facebook":
+             logo_class = "facebook big icon";
+             break;
+           case "linkedin":
+             logo_class = "linkedin big icon";
+             break;
+           case "university_email":
+             logo_class = "envelope big icon";
+             break;
+           case "orcid":
+            logo_class = "pencil alternate big icon";
+             break;
+           default:
+             logo_class = "envelope big icon";
+             break;
+          }
+          elems_html += '<div class="item"><a href="'+obj_contact["value"]+'"><i class="'+logo_class+'"></i>'+obj_contact["label"]+'</a></div>';
+        }
+      }
+    }
+  }
+  return elems_html;
+}
+
 
 function last_diary(diary_obj) {
   var items = diary_obj["items"];
@@ -236,4 +263,51 @@ function report_handler(an_item) {
     "content": content
   }
   return normalized_item;
+}
+
+function build_dynamic_section(dynamic_sec_obj) {
+  for (var i = 0; i < my_config["dynamic_section"].length; i++) {
+    var a_d_sec = my_config["dynamic_section"][i];
+    var window_div = document.createElement("div");
+    window_div.id = a_d_sec["id"];
+    window_div.classList.add("window",a_d_sec["section_type"]);
+    window_div.innerHTML = '<div class="body"></div><div class="footer"></div>'
+    document.getElementById("dynamic_section").appendChild(window_div);
+    $.ajax({
+        type: "GET",
+        url: a_d_sec["url"],
+        dataType: "json",
+        async: true,
+        success: function(data) {
+          _call_for_content(a_d_sec["handler"],data["items"],a_d_sec["id"], 0);
+        }
+     });
+  }
+
+  function _call_for_content(handler, _items, id, index) {
+    if (index == _items.length) {
+      return true;
+    }
+    var an_item = _items[index];
+    $.ajax({
+          type: "GET",
+          url: an_item["link"],
+          dataType: "html",
+          async: true,
+          success: function(data) {
+            var normalize_item = {"date": an_item["date"], "html_content": data}
+            var normalized_item = Reflect.apply(handler,undefined,[normalize_item]);
+
+            var str_html_content = "<div class='item_title'>"+normalized_item["date"]+"</a></div><div class='item_content'>";
+            for (var j = 0; j < normalized_item["content"].length; j++) {
+              str_html_content = str_html_content + "<li>"+normalized_item["content"][j]+"</li>";
+            }
+            str_html_content = str_html_content + "<li id='full_text'><a href='"+an_item["link"]+"'>Read the full report</a></li></div>";
+            //console.log(str_html_content);
+            $("#"+id+" .body")[0].innerHTML = $("#"+id+" .body")[0].innerHTML + str_html_content;
+
+            _call_for_content(handler, _items, id, index + 1)
+          }
+      });
+  }
 }

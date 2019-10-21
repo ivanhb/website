@@ -8,52 +8,7 @@ var SECTIONS_PROFILE_DOM = {};
 var SLIDERS = {};
 var SUITABLE_SECTIONS = {}
 
-function build_dynamic_section(dynamic_sec_obj) {
-  for (var i = 0; i < my_config["dynamic_section"].length; i++) {
-    var a_d_sec = my_config["dynamic_section"][i];
-    var window_div = document.createElement("div");
-    window_div.id = a_d_sec["id"];
-    window_div.classList.add("window",a_d_sec["section_type"]);
-    window_div.innerHTML = '<div class="header">'+a_d_sec["section_title"]+'</div><div class="body"></div><div class="footer"></div>'
-    document.getElementById("dynamic_section").appendChild(window_div);
-    $.ajax({
-        type: "GET",
-        url: a_d_sec["url"],
-        dataType: "json",
-        async: false,
-        success: function(data) {
-          _call_for_content(a_d_sec["handler"],data["items"],a_d_sec["id"], 0);
-        }
-     });
-  }
 
-  function _call_for_content(handler, _items, id, index) {
-    if (index == _items.length) {
-      return true;
-    }
-    var an_item = _items[index];
-    $.ajax({
-          type: "GET",
-          url: an_item["link"],
-          dataType: "html",
-          async: true,
-          success: function(data) {
-            var normalize_item = {"date": an_item["date"], "html_content": data}
-            var normalized_item = Reflect.apply(handler,undefined,[normalize_item]);
-
-            var str_html_content = "<div class='item_title'>"+normalized_item["date"]+"</a></div><div class='item_content'>";
-            for (var j = 0; j < normalized_item["content"].length; j++) {
-              str_html_content = str_html_content + "<li>"+normalized_item["content"][j]+"</li>";
-            }
-            str_html_content = str_html_content + "<div id='full_text'><a href='"+an_item["link"]+"'>Read report</a></div></div>";
-            //console.log(str_html_content);
-            $("#"+id+" .body")[0].innerHTML = $("#"+id+" .body")[0].innerHTML + str_html_content;
-
-            _call_for_content(handler, _items, id, index + 1)
-          }
-      });
-  }
-}
 
 function handle_req(type_req, res_req, request_obj) {
   if (request_obj != undefined) {
@@ -511,4 +466,13 @@ function order_arr(arr, data_type) {
     case "int":
       return arr.sort(function(a, b){return a-b});
   }
+}
+
+function get_sec_conf(sec_id){
+  for (var i = 0; i < my_config['section'].length; i++) {
+    if(my_config['section'][i]["id"] == sec_id){
+      return my_config['section'][i];
+    }
+  }
+  return -1;
 }
