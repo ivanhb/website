@@ -1,5 +1,7 @@
 var layout_config = {
   "homelogo": {link: "https://ivanhb.github.io/data/img/full_logo_vanilla.svg"},
+  'website_url': "https://ivanhb.github.io/website/",
+  'html_dir': "https://ivanhb.github.io/website/layout/",
   "nav_menu": {
     "projects": {title: "Projects", link: "layout/projects.html"},
     "activities": {title: "Activities", link: "layout/activities.html"},
