@@ -17,70 +17,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properties -->
-  <title>Ivan Heibi's website</title>
-
-  <!--<link rel="stylesheet" type="text/css" href="css/slider.css">-->
-  <link rel="stylesheet" href="dist/slider/css/rSlider.min.css">
-  <script src="dist/slider/js/rSlider.min.js"></script>
-
-
+  <title>Home</title>
   <link rel="stylesheet" type="text/css" href="dist/components/reset.css">
   <link rel="stylesheet" type="text/css" href="dist/components/site.css">
-
-  <link rel="stylesheet" type="text/css" href="dist/components/container.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/grid.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/header.css">
   <link rel="stylesheet" type="text/css" href="dist/components/image.css">
   <link rel="stylesheet" type="text/css" href="dist/components/menu.css">
-
-  <link rel="stylesheet" type="text/css" href="dist/components/divider.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/dropdown.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/segment.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/button.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/list.css">
   <link rel="stylesheet" type="text/css" href="dist/components/icon.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/sidebar.css">
-  <link rel="stylesheet" type="text/css" href="dist/components/transition.css">
+
 
   <link rel="stylesheet" type="text/css" href="css/ar.css">
   <link rel="stylesheet" type="text/css" href="css/index.css">
 
-  <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
-
-  <script src="assets/library/jquery.min.js"></script>
-  <script src="dist/components/visibility.js"></script>
-  <script src="dist/components/sidebar.js"></script>
-  <script src="dist/components/transition.js"></script>
-
-  <script  type="text/javascript" src="content_config.js"></script>
-  <script  type="text/javascript" src="js/pre_load.js"></script>
-
 </head>
 <body>
-        <div class="topnav ui secondary pointing menu large">
-          <a class="item">Messages</a>
-          <a class="item">Friends</a>
-          <a class="item active">Home</a>
+        <div id="menu" class="topnav ui secondary pointing menu large"></div>
+        <div id="section_style">
+          <link rel="stylesheet" type="text/css" href="css/home.css">
         </div>
+        <div id="section_structure">
+          <div class="entry">
+              <img class="prof-img ui circular image img-thumbnail bordered" src="https://ivanhb.github.io/data/img/prof.jpg">
+              <div class="header">Ivan Heibi's website</div>
+              <div class="body">
+              <p>This is Ivan Heibi’s website, Ivan is currently a Phd student at the <a href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a>, <a href="http://www.ficlit.unibo.it/it">Department of Classical Philology and Italian Studies</a>. Here you can find all you need regarding his past, present, and future works.</p>
+              <p>Below you can read the last news and works done, while From the above navigation menu you can view the list of projects, activities, and publications made.</p>
+              <p>For any further information, don’t hesitate to contact him through any of his social media accounts.</p>
+              </div>
+          </div>
+          <table class="boxes">
+              <tr>
+                <td class="contacts-header"><div></div></td>
+                <td class="organizations-header"><div>Organizations</div></td>
+                <td class="report-header"><div>Last progresses</div></td>
+              </tr>
+              <tr>
+                  <td class="contacts"><div class="header">Contacts</div></td>
+                  <td class="organizations">
+                    <table>
+                      <tr>
+                        <td><img class="logo" src="/Users/ivan.heibi/ivanhb.github.io/data/img/oc_logo.png"></td>
+                        <td>Started in November 2017, and still an active member/researcher in the <a href="http://opencitations.net/">OpenCitaions organization</a></td>
+                      </tr>
+                      <tr>
+                        <td><img class="logo" src="/Users/ivan.heibi/ivanhb.github.io/data/img/dharc_logo.png"></td>
+                        <td>I am a member of the <a href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a></td>
+                      </tr>
+                      <tr>
+                        <td><img class="logo" src="/Users/ivan.heibi/ivanhb.github.io/data/img/unibo_logo.png"></td>
+                        <td>A Ph.D. student in the <a href="http://www.ficlit.unibo.it/it">Department of Classical Philology and Italian Studies, University of Bologna</a></td>
+                      </tr>
+                    </table>
+                  </td>
 
-        <div id="section"></div>
-        <div id="section_scripts"></div>
-
+                  <td id="dynamic_section" class="report"></td>
+              </tr>
+          </table>
+        </div>
 </body>
 
+<script src="assets/library/jquery.min.js"></script>
+<script  type="text/javascript" src="content_config.js"></script>
+<script  type="text/javascript" src="js/sections.js"></script>
 <script>
-      function load_a_layout(name) {
-        $.ajax({
-            type: "GET",
-            url: my_config.BASE+"layout/"+name+".html",
-            dataType: "text",
-            async: false,
-            success: function(data) {
-              $("#section").innerHTML = data;
-            }
-         });
-      }
-      load_a_layout("home");
+      sections.fixed();
+      sections.homepage();
 </script>
 
 </html>

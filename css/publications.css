@@ -1,0 +1,82 @@
+
+.boxes{
+  margin-top: 0px;
+  float:left;
+  width: 100%;
+  height: 220px;
+  border-spacing: 5px 0px;
+  border-collapse: separate;
+}
+
+.boxes .description-header{
+ height: 50px;
+ width: 280px;
+ font-size: 150%;
+ background-color: #4d535c;
+ border-bottom: solid 10px #b7babd;
+ padding-left: 10px;
+ color: var(--background-color);
+ border-radius: 5px 45px 3px 3px;
+}
+.boxes .itemlist-header{}
+.boxes .separator.tr{
+  height: 10px;
+}
+
+.boxes .item{
+  vertical-align: top;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.boxes .item.alternate{
+  background-color: #eaeaea;
+  border-top: #b7babd solid;
+  border-bottom: #b7babd solid;
+}
+.boxes .item-info{
+  font-size: 90%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  vertical-align: bottom;
+}
+.boxes .item-info .title{
+  font-size: 105%;
+  padding-bottom: 5px;
+}
+.boxes .item-info.alternate{
+  background-color: #eaeaea;
+  border-top: #b7babd solid;
+  border-bottom: #b7babd solid;
+}
+.boxes .item-info .item-link{
+  text-align: center;
+}
+.boxes .item-info .separator{
+  text-align: center;
+  font-size: 10px;
+}
+.boxes .item-info .keywords{
+  vertical-align: bottom;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+.boxes .item-info .keywords i{
+  padding-left:5px;
+  padding-right:5px;
+  font-size: 5px;
+}
+
+.boxes .item .title{
+  font-size: 110%;
+  border-left: #F4D03F solid 4px;
+  padding-left: 10px;
+  display: inline-block;
+}
+.boxes .item .link{
+  font-size: 105%;
+  border-left: #F4D03F solid 4px;
+  padding-left: 10px;
+}
