@@ -3,9 +3,9 @@ var layout_config = {
   'website_url': "https://ivanhb.github.io/website/",
   'html_dir': "https://ivanhb.github.io/website/layout/",
   "nav_menu": {
-    "projects": {title: "Projects", link: "layout/projects.html"},
-    "activities": {title: "Activities", link: "layout/activities.html"},
-    "publications": {title: "Publications", link: "layout/publications.html"},
+    "projects": {title: "Projects", link: "projects.html"},
+    "activities": {title: "Activities", link: "activities.html"},
+    "publications": {title: "Publications", link: "publications.html"},
   }
 }
 
