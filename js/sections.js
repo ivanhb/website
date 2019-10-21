@@ -13,7 +13,7 @@ var sections = (function () {
       if (section == a_section) {
         active = "active";
       }
-      nav_html = '<a class="item '+active+'" href="'layout_config.html_dir+sec_obj.link+'">'+sec_obj.title+'</a>'+ nav_html;
+      nav_html = '<a class="item '+active+'" href="'+layout_config.html_dir+sec_obj.link+'">'+sec_obj.title+'</a>'+ nav_html;
       active = "";
     }
 
