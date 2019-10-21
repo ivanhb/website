@@ -11,54 +11,28 @@ var layout_config = {
 var my_config = {
   'BASE': "https://ivanhb.github.io/",
   'WEBSITE_BASE': "https://ivanhb.github.io/website/",
+
   'dynamic_section':[
     {
       'id': 'diary',
-      'section_title': "",
-      'section_type': 'report',
-      'section_class': '',
       'url': 'https://ivanhb.github.io/edu/index/diary.json',
       'handler': report_handler,
     }
   ],
-  'profile_section': {
-    'id': 'profile',
-    'source': 'https://ivanhb.github.io/doc/personal/bio.json',
-    'section_title': 'About me',
-    'section_type': 'profile',
-    'section_class': 'profile'
-  },
   'section':[
       {
         'id': 'projects',
-        'source': 'https://ivanhb.github.io/edu/index/project.json',
-        'section_title': 'Projects',
-        'section_type': 'gen-sec',
-        'section_class': 'project'
+        'source': 'https://ivanhb.github.io/edu/index/project.json'
       },
       {
         'id': 'activities',
-        'source': 'https://ivanhb.github.io/edu/index/activity.json',
-        'section_title': 'Activities',
-        'section_type': 'gen-sec',
-        'section_class': 'activity'
+        'source': 'https://ivanhb.github.io/edu/index/activity.json'
       },
       {
         'id': 'publications',
-        'source': 'https://ivanhb.github.io/edu/index/publication.json',
-        'section_title': 'Publications',
-        'section_type': 'gen-sec',
-        'section_class': 'publication'
+        'source': 'https://ivanhb.github.io/edu/index/publication.json'
       }
-  ],
-  'request': {
-    'workdiary':{
-      'link': "https://ivanhb.github.io/edu/index/diary.json",
-      'query': {
-          'last': last_diary
-      }
-    }
-  }
+  ]
 }
 
 
@@ -297,7 +271,7 @@ function build_dynamic_section(dynamic_sec_obj) {
     var window_div = document.createElement("div");
     window_div.id = a_d_sec["id"];
     window_div.classList.add("window",a_d_sec["section_type"]);
-    window_div.innerHTML = '<div class="header">'+a_d_sec["section_title"]+'</div><div class="body"></div><div class="footer"></div>'
+    window_div.innerHTML = '<div class="body"></div><div class="footer"></div>'
     document.getElementById("dynamic_section").appendChild(window_div);
     $.ajax({
         type: "GET",

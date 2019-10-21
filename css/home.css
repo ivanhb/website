@@ -70,6 +70,7 @@
 .boxes .report{
   vertical-align: top;
   margin-left: 10px;
+  padding-top: 20px;
   width: 30%;
   height: inherit;
   background-color: #f3eaee;
