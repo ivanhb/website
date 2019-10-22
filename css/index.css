@@ -25,10 +25,10 @@
 body{
   font-family: Georgia, Times, "Times New Roman";
   font-size: 12pt;
-  padding-left: 10%;
-  padding-right: 10%;
   padding-top: 2%;
   margin-bottom: 40px;
+  margin-right: 8%;
+  margin-left: 8%;
 }
 
 body a{

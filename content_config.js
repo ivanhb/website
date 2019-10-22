@@ -230,7 +230,7 @@ function normalize_contacts(elems) {
              logo_class = "envelope big icon";
              break;
           }
-          elems_html += '<div class="item"><a href="'+obj_contact["value"]+'"><i class="'+logo_class+'"></i>'+obj_contact["label"]+'</a></div>';
+          elems_html += '<div class="item"><a href="'+obj_contact["value"]+'"><i class="'+logo_class+'"></i><span class="after-logo">'+obj_contact["label"]+'</span></a></div>';
         }
       }
     }
@@ -312,4 +312,13 @@ function build_dynamic_section(dynamic_sec_obj) {
           }
       });
   }
+}
+
+function get_sec_conf(sec_id){
+  for (var i = 0; i < my_config['section'].length; i++) {
+    if(my_config['section'][i]["id"] == sec_id){
+      return my_config['section'][i];
+    }
+  }
+  return -1;
 }

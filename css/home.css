@@ -8,133 +8,26 @@
 }
 .entry .header{
   font-size: 180%;
+  float: right;
   padding-bottom: 10px;
-}
-.entry .body{
-  float:left;
   width: 70%;
 }
-.entry .prof-img{
-  width: 280px;
-  padding: 10px;
-  float: left;
-  margin-right: 2%;
+.entry .body{
+  float: right;
+  width: 70%;
 }
 
-
-.boxes{
-  margin-top: 0px;
+.contacts-col{
+  vertical-align: top;
+  width: 28%;
   float:left;
-  width: 100%;
-  height: 220px;
-  border-spacing: 30px 0px;
-  border-collapse: separate;
 }
-
-.boxes .organizations-header div{
- height: 60px;
- width: 100%;
- font-size: 150%;
- background-color: #2F8A60;
- border-bottom: solid 10px #d5e7df;
- padding: 10px;
- color: var(--background-color);
- border-radius: 5px 45px 3px 3px;
+.contacts-col .prof-img{
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 250px;
 }
-.boxes .organizations{
-  border: 0.5px gray solid;
-  width: 30%;
-  padding: 7px;
-  height: inherit;
-  background-color: #eaf3ef;
-}
-.boxes .organizations table{
-  border-spacing: 15px 20px;
-  border-collapse: separate;
-}
-.logo{
-  float: left;
-  width: 80px;
-}
-
-.boxes .report-header div{
- height: 60px;
- width: 100%;
- font-size: 150%;
- background-color: #D05959;
- border-bottom: solid 10px #e7d5dd;
- padding: 10px;
- color: var(--background-color);
- border-radius: 5px 45px 3px 3px;
-}
-.boxes .report{
-  vertical-align: top;
-  margin-left: 10px;
-  padding-top: 20px;
-  width: 30%;
-  height: inherit;
-  background-color: #f3eaee;
-}
-.boxes td.report{
-  border: 0.5px gray solid;
-  padding-bottom: 10px;
-}
-.boxes .report div{
-  width: 95%;
-}
-.boxes .report div .body{
-  height: 200px;
-}
-.boxes .report div li{
-  list-style: none;
-}
-.boxes .report div li::before {
-  content: "\2022";
-  color: #8A2F59;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -0.5em;
-}
-.boxes .report div li#full_text:before {
-  content: "\002B";
-  color: var(--link-color);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -0.5em;
-}
-
-.boxes .report div .header{
-  font-size: 160%;
-  padding-bottom: 15px;
-}
-.boxes .report div .body{
-  font-size: 85%;
-  overflow: auto;
-  min-height: 280px;
-}
-.boxes .report div .body .item_title{
-  text-align: right;
-  width: 100%;
-  border-bottom: 0.4pt solid;
-  margin-bottom: 5px;
-}
-.boxes .report div .body .item_content{
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-.boxes .report div .body .item_content #full_text{
-  text-align: left;
-}
-
-.boxes .contacts{
-  vertical-align: top;
-  width: 20%;
-  height: inherit;
-  text-align:left;
-}
-.boxes .contacts .header{
+.contacts-header{
    height: 45px;
    width: 100%;
    font-size: 130%;
@@ -144,8 +37,195 @@
    color: var(--background-color);
    border-radius: 3px 3px 45px 3px;
    margin-bottom: 20px;
+   margin-top: 20px;
 }
-.boxes .contacts .item{
+.contacts{
+  vertical-align: top;
+  height: inherit;
+  text-align:left;
+}
+.contacts .item{
   padding-bottom: 8px;
-  font-size: 1vw;
+  font-size: 12pt;
+}
+
+
+
+.organizations-col{
+  margin-top: 20px;
+  height: 220px;
+  margin-left: 2%;
+  display: inline-block;
+  width: 30%;
+}
+.organizations-header{
+ font-size: 12pt;
+ height: 60px;
+ font-size: 150%;
+ background-color: #2F8A60;
+ border-bottom: solid 10px #d5e7df;
+ padding: 10px;
+ color: var(--background-color);
+ border-radius: 5px 45px 0px 0px;
+}
+.organizations{
+  font-size: 10pt;
+  border: 0.5px gray solid;
+  background-color: #eaf3ef;
+  border-spacing: 8px 15px;
+}
+.organizations .item{
+  display: table-row;
+}
+.organizations .item .logo{
+  margin-right: 10px;
+}
+
+.logo{
+  float: left;
+  width: 80px;
+}
+
+.report-col{
+  margin-top: 20px;
+  width: 35%;
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 2%;
+}
+.report-header{
+ height: 60px;
+ font-size: 150%;
+ background-color: #D05959;
+ border-bottom: solid 10px #e7d5dd;
+ padding: 10px;
+ color: var(--background-color);
+ border-radius: 5px 45px 0px 0px;
+}
+.report{
+  height: inherit;
+  background-color: #f3eaee;
+  border: 0.5px gray solid;
+  padding: 10px;
+}
+#dynamic_section #diary .body{
+  height: 300px;
+}
+#dynamic_section li{
+  list-style: none;
+}
+#dynamic_section li::before {
+  content: "\2022";
+  color: #8A2F59;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -0.5em;
+}
+#dynamic_section li#full_text:before {
+  content: "\002B";
+  color: var(--link-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -0.5em;
+}
+
+#dynamic_section .header{
+  font-size: 160%;
+  padding-bottom: 15px;
+}
+#dynamic_section .body{
+  font-size: 85%;
+  overflow: auto;
+  min-height: 280px;
+}
+#dynamic_section .body .item_title{
+  text-align: right;
+  width: 100%;
+  border-bottom: 0.4pt solid;
+  margin-bottom: 5px;
+}
+#dynamic_section .body .item_content{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+#dynamic_section .item_content #full_text{
+  text-align: left;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .organizations-col{
+    width:70%;
+    float:right;
+  }
+  .organizations{
+    width: 100%;
+    padding: 10px;
+    border-spacing: 5px 5px;
+  }
+
+  .logo{
+    width: 60px;
+  }
+  .report-col{
+    margin-top: 70px;
+    width:70%;
+    float:right;
+  }
+
+  .contacts .item{
+    padding-bottom: 8px;
+    font-size: 10pt;
+  }
+  .contacts-col .prof-img{
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 200px;
+  }
+}
+
+
+@media only screen and (max-width: 820px) {
+  .entry .body{
+    width: 100%;
+  }
+  .entry .header{
+    width: 100%;
+  }
+  .organizations-col{
+    width:100%;
+  }
+  .report-col{
+    width:100%;
+  }
+
+  .contacts-col {
+    width: 100%;
+  }
+  .prof-img{
+    float:left;
+    width: 50%;
+  }
+  .contacts-header{
+    display: none;
+  }
+  .contacts{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 45%;
+    display: inline-block;
+  }
+  .contacts .item{
+    display: inline-block;
+  }
+  .contacts .item .after-logo{
+    display: none;
+  }
+  .contacts .item .icon{
+    font-size: 50px;
+    display: inline-block;
+  }
+
 }

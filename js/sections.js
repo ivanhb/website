@@ -38,7 +38,7 @@ var sections = (function () {
                var bio_obj = data["items"][0];
                var an_item_html = "<div class='bio_contacts'>"+normalize_contacts(bio_obj["contacts"])+"</div>";
 
-               $(".boxes .contacts div:last").after("<div>"+an_item_html+"</div>");
+               $(".contacts").html("<div>"+an_item_html+"</div>");
              }
            }
     });

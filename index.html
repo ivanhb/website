@@ -36,7 +36,6 @@
         </div>
         <div id="section_structure">
           <div class="entry">
-              <img class="prof-img ui circular image img-thumbnail bordered" src="https://ivanhb.github.io/data/img/prof.jpg">
               <div class="header">Ivan Heibi's website</div>
               <div class="body">
               <p>This is Ivan Heibi’s website, Ivan is currently a Phd student at the <a href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a>, <a href="http://www.ficlit.unibo.it/it">Department of Classical Philology and Italian Studies</a>. Here you can find all you need regarding his past, present, and future works.</p>
@@ -44,37 +43,39 @@
               <p>For any further information, don’t hesitate to contact him through any of his social media accounts.</p>
               </div>
           </div>
-          <table class="boxes">
-              <tr>
-                <td class="contacts-header"><div></div></td>
-                <td class="organizations-header"><div>Organizations</div></td>
-                <td class="report-header"><div>Last progresses</div></td>
-              </tr>
-              <tr>
-                  <td class="contacts"><div class="header">Contacts</div></td>
-                  <td class="organizations">
-                    <table>
-                      <tr>
-                        <td><img class="logo" src="https://ivanhb.github.io/data/img/oc_logo.png"></td>
-                        <td>Started in November 2017, and still an active member/researcher in the <a href="http://opencitations.net/">OpenCitaions organization</a></td>
-                      </tr>
-                      <tr>
-                        <td><img class="logo" src="https://ivanhb.github.io/data/img/dharc_logo.png"></td>
-                        <td>I am a member of the <a href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a></td>
-                      </tr>
-                      <tr>
-                        <td><img class="logo" src="https://ivanhb.github.io/data/img/unibo_logo.png"></td>
-                        <td>A Ph.D. student at the <a href="http://www.ficlit.unibo.it/it">Department of Classical Philology and Italian Studies, University of Bologna</a></td>
-                      </tr>
-                    </table>
-                  </td>
+          <div class="contacts-col">
+            <img class="prof-img ui circular image img-thumbnail bordered" src="https://ivanhb.github.io/data/img/prof.jpg">
+            <div class="contacts-header">Contacts</div>
+            <div class="contacts"></div>
+          </div>
 
-                  <td id="dynamic_section" class="report"></td>
-              </tr>
-          </table>
+          <div class="organizations-col">
+              <div class="organizations-header">Organizations</div>
+                   <div class="organizations">
+                      <div class="item">
+                        <div><img class="logo" src="https://ivanhb.github.io/data/img/oc_logo.png"></div>
+                        <div>Started in November 2017, and still an active member/researcher in the <a href="http://opencitations.net/">OpenCitaions organization</a></div>
+                      </div>
+                      <div class="item">
+                        <div><img class="logo" src="https://ivanhb.github.io/data/img/dharc_logo.png"></div>
+                        <div>I am a member of the <a href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a></div>
+                      </div>
+                      <div class="item">
+                        <div><img class="logo" src="https://ivanhb.github.io/data/img/unibo_logo.png"></div>
+                        <div>A Ph.D. student at the <a href="http://www.ficlit.unibo.it/it">Department of Classical Philology and Italian Studies, University of Bologna</a></div>
+                      </div>
+                  </div>
+          </div>
+
+          <div class="report-col">
+                    <div class="report-header">Last progresses</div>
+                    <div class="report"><div id="dynamic_section"></div></div>
+          </div>
+
         </div>
 </body>
 
+<div class="page-footer"></div>
 <script src="assets/library/jquery.min.js"></script>
 <script  type="text/javascript" src="content_config.js"></script>
 <script  type="text/javascript" src="js/sections.js"></script>

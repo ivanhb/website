@@ -27,6 +27,7 @@
   vertical-align: top;
   padding-bottom: 10px;
   padding-top: 10px;
+  padding-right: 12px;
 }
 .boxes .item.alternate{
   background-color: #eaeaea;
@@ -79,4 +80,17 @@
   font-size: 105%;
   border-left: #F4D03F solid 4px;
   padding-left: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  body{
+    font-size: 95%;
+  }
+  .boxes .description-header{
+    width: 120px;
+  }
+  .boxes .description-header{
+    font-size: 12pt;
+    height: 40px;
+  }
 }

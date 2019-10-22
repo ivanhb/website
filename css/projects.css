@@ -28,6 +28,7 @@
   vertical-align: top;
   padding-bottom: 30px;
   padding-top: 20px;
+  padding-right: 12px;
 }
 .boxes .item.alternate{
   background-color: #eaeaea;
@@ -97,4 +98,18 @@
 }
 .boxes .item .achievements{
   padding-left: 15px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  body{
+    font-size: 95%;
+  }
+  .boxes .description-header{
+    width: 120px;
+  }
+  .boxes .description-header{
+    font-size: 12pt;
+    height: 40px;
+  }
 }
