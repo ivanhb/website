@@ -9,6 +9,7 @@
 }
 
 .boxes .description-header{
+  visibility: hidden;
  height: 50px;
  width: 280px;
  font-size: 150%;

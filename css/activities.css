@@ -9,14 +9,15 @@
 }
 
 .boxes .description-header{
- height: 50px;
- width: 280px;
- font-size: 150%;
- background-color: #4d535c;
- border-bottom: solid 10px #b7babd;
- padding-left: 10px;
- color: var(--background-color);
- border-radius: 5px 45px 3px 3px;
+   visibility: hidden;
+   height: 50px;
+   width: 280px;
+   font-size: 150%;
+   background-color: #4d535c;
+   border-bottom: solid 10px #b7babd;
+   padding-left: 10px;
+   color: var(--background-color);
+   border-radius: 5px 45px 3px 3px;
 }
 .boxes .itemlist-header{}
 .boxes .separator.tr{

@@ -77,6 +77,7 @@ var sections = (function () {
               }
 
               $(".boxes tr:last").after("<tr>"+an_item_info_html+an_item_html+"</tr>");
+              $(".boxes .description-header").css("visibility","visible");
             }
           }
         }
@@ -113,7 +114,8 @@ var sections = (function () {
               }
 
               $(".boxes tr:last").after("<tr>"+an_item_info_html+an_item_html+"</tr>");
-
+              //display header
+              $(".boxes .description-header").css("visibility","visible");
             }
           }
         }
@@ -145,6 +147,7 @@ var sections = (function () {
               }
 
               $(".boxes tr:last").after("<tr>"+an_item_info_html+an_item_html+"</tr>");
+              $(".boxes .description-header").css("visibility","visible");
             }
           }
         }
