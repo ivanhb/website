@@ -40,3 +40,14 @@ body a:hover{
   border-bottom: none;
   opacity: 1;
 }
+
+
+@media only screen and (max-width: 820px) {
+  #menu img{
+    width: 100%;
+  }
+  #menu .item{
+    display: table-cell;
+    width: 25%;
+  }
+}

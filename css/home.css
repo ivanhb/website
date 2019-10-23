@@ -214,7 +214,7 @@
   .contacts{
     margin-top: 7%;
     margin-left: 5%;
-    width: 35%;
+    width: 40%;
     display: inline-block;
   }
   .contacts .item{
@@ -224,7 +224,7 @@
     display: none;
   }
   .contacts .item .icon{
-    font-size: 50px;
+    font-size: 350%;
     display: inline-block;
   }
 
