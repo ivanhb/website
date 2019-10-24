@@ -87,8 +87,9 @@ var sections = (function () {
                 an_item_info_html = "<td class='item-info alternate'>"+an_item_info_html+"</td>";
               }
 
-              $(".boxes tr:last").after("<tr>"+an_item_info_html+an_item_html+"</tr>");
-              $(".boxes .description-header").css("visibility","visible");
+              $(".boxes tr:last").after("<tr>"+an_item_html+an_item_info_html+"</tr>");
+              //display header
+              $(".boxes .itemslist-header").css("visibility","visible");
             }
           }
         }
@@ -124,9 +125,9 @@ var sections = (function () {
                 an_item_info_html = "<td class='item-info alternate'>"+an_item_info_html+"</td>";
               }
 
-              $(".boxes tr:last").after("<tr>"+an_item_info_html+an_item_html+"</tr>");
+              $(".boxes tr:last").after("<tr>"+an_item_html+an_item_info_html+"</tr>");
               //display header
-              $(".boxes .description-header").css("visibility","visible");
+              $(".boxes .itemslist-header").css("visibility","visible");
             }
           }
         }
@@ -157,8 +158,9 @@ var sections = (function () {
                 an_item_info_html = "<td class='item-info alternate'>"+an_item_info_html+"</td>";
               }
 
-              $(".boxes tr:last").after("<tr>"+an_item_info_html+an_item_html+"</tr>");
-              $(".boxes .description-header").css("visibility","visible");
+              $(".boxes tr:last").after("<tr>"+an_item_html+an_item_info_html+"</tr>");
+              //display header
+              $(".boxes .itemslist-header").css("visibility","visible");
             }
           }
         }

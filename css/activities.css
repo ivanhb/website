@@ -8,18 +8,16 @@
   border-collapse: separate;
 }
 
-.boxes .description-header{
+.boxes .itemslist-header{
    visibility: hidden;
-   height: 50px;
-   width: 280px;
-   font-size: 150%;
+   height: 45px;
+   font-size: 140%;
    background-color: #4d535c;
    border-bottom: solid 10px #b7babd;
    padding-left: 10px;
    color: var(--background-color);
    border-radius: 5px 45px 3px 3px;
 }
-.boxes .itemlist-header{}
 .boxes .separator.tr{
   height: 10px;
 }
@@ -124,11 +122,28 @@
   body{
     font-size: 95%;
   }
-  .boxes .description-header{
-    width: 120px;
+  .boxes{
+    border-spacing: 0px 5px;
   }
-  .boxes .description-header{
+  .boxes .item{
+    display: block;
+    border-bottom: 0.5px gray dashed!important;
+  }
+  .boxes .item-info{
+    display: block;
+    border-top: none!important;
+  }
+  .boxes .itemslist-header{
     font-size: 12pt;
     height: 40px;
+  }
+  .boxes .item-info .keywords{
+    padding-top: 0px;
+    width: 50%;
+  }
+  .boxes .item-info .attached{
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 1px;
   }
 }
