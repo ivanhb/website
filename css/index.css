@@ -10,17 +10,34 @@
   height: 100%;
 }
 
-#menu a{
-  float: right;
+
+.nav-item{
   margin-top: 20px;
+  font-size: 12pt;
+  float: right;
 }
-#menu img{
+#menu_logo img{
   width: 140px;
   height: 50px;
   margin-left: 10px;
   float: left;
   vertical-align: bottom;
 }
+#menu_nav_logo{
+  display: none;
+  margin-top: 15px;
+  font-size: 12pt;
+  float: right;
+  border: none;
+  background-color: var(--background-color);
+}
+#menu_nav_logo{
+  font-size: 20pt;
+}
+#menu_nav_list{
+  display: none;
+}
+
 
 body{
   font-family: Georgia, Times, "Times New Roman";
@@ -43,16 +60,23 @@ body a:hover{
 
 
 @media only screen and (max-width: 820px) {
-  #menu{
-    display: table;
+  #menu_logo img{
+    margin-left: 0px;
   }
-  #menu img{
+  #menu_nav{
+    display: none;
+  }
+
+  #menu_nav_logo{
+    display: block;
+  }
+
+  .nav-item{
     display: table-row;
     width: 100%;
   }
-  #menu a{
-    display: table-cell;
-    width: 25%;
-    text-align: center;
+  #menu_nav_list{
+    display: block;
+    background-color: #E5E7E9;
   }
 }

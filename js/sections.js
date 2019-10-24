@@ -6,14 +6,14 @@ var sections = (function () {
     if (section == "home") {
       active = "active";
     }
-    var nav_html = '<a class="item '+active+'" href="'+layout_config.homepage+'">Home</a>';
+    var nav_html = '<a class="nav-item item '+active+'" href="'+layout_config.homepage+'">Home</a>';
     active = "";
     for (var a_section in layout_config.nav_menu) {
       var sec_obj = layout_config.nav_menu[a_section];
       if (section == a_section) {
         active = "active";
       }
-      nav_html = '<a class="item '+active+'" href="'+layout_config.pages_dir+sec_obj.link+'">'+sec_obj.title+'</a>'+ nav_html;
+      nav_html = '<a class="nav-item item '+active+'" href="'+layout_config.pages_dir+sec_obj.link+'">'+sec_obj.title+'</a>'+nav_html;
       active = "";
     }
 
@@ -24,7 +24,18 @@ var sections = (function () {
       }
     }
 
-    $("#menu").html(homelogo + nav_html);
+    $("#menu_logo").html(homelogo);
+    $("#menu_nav").html(nav_html);
+
+    $( "#menu_nav_logo" ).click(function() {
+
+          if ($("#menu_nav_list").html() == "") {
+            $("#menu_nav_list").html($("#menu_nav").html());
+          }else {
+            $("#menu_nav_list").html("");
+          }
+
+    });
   }
 
   function homepage() {
