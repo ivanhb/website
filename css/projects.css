@@ -122,11 +122,5 @@
   }
   .boxes .item-info .keywords{
     padding-top: 0px;
-    width: 50%;
-  }
-  .boxes .item-info .attached{
-    display: inline-block;
-    width: 50%;
-    margin-bottom: 1px;
   }
 }
