@@ -74,9 +74,12 @@ body a:hover{
   .nav-item{
     display: table-row;
     width: 100%;
+    float: left;
   }
   #menu_nav_list{
     display: block;
     background-color: #E5E7E9;
+    width: 100%;
+    padding-right: 5px;
   }
 }
