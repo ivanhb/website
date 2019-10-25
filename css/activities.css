@@ -124,14 +124,18 @@
   }
   .boxes{
     border-spacing: 0px 5px;
+    border-collapse: collapse;
   }
   .boxes .item{
+    margin-top: 10px;
     display: block;
     border-bottom: 0.5px gray dashed!important;
   }
   .boxes .item-info{
     display: block;
     border-top: none!important;
+    padding-bottom: 2px;
+    padding-top: 8px;
   }
   .boxes .itemslist-header{
     font-size: 12pt;

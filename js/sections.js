@@ -20,7 +20,7 @@ var sections = (function () {
     var homelogo = "";
     if ("homelogo" in layout_config) {
       if ("link" in layout_config["homelogo"]) {
-        homelogo = "<img src='"+layout_config["homelogo"]["link"]+"'>";
+        homelogo = "<a href='"+layout_config.homepage+"'><img src='"+layout_config["homelogo"]["link"]+"'></a>";
       }
     }
 
