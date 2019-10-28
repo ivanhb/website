@@ -6,6 +6,12 @@ var layout_config = {
     "projects": {title: "Projects", link: "projects.html"},
     "activities": {title: "Activities", link: "activities.html"},
     "publications": {title: "Publications", link: "publications.html"},
+  },
+  "dynamic_section": {
+    //in pixels
+    "top_margin": 70,
+    "header_height": 60,
+    "max_height": 300
   }
 }
 
@@ -18,7 +24,7 @@ var my_config = {
     {
       'id': 'diary',
       'url': 'https://ivanhb.github.io/edu/index/diary.json',
-      'handler': report_handler,
+      'handler': report_handler
     }
   ],
   'section':[

@@ -53,38 +53,37 @@
 
 .organizations-col{
   margin-top: 20px;
-  height: 220px;
   margin-left: 2%;
   display: inline-block;
   width: 30%;
+  height: fit-content;
 }
 .organizations-header{
- font-size: 12pt;
- height: 60px;
- font-size: 150%;
- background-color: #2F8A60;
- border-bottom: solid 10px #d5e7df;
- padding: 10px;
- color: var(--background-color);
- border-radius: 5px 45px 0px 0px;
+   font-size: 12pt;
+   height: 60px;
+   font-size: 150%;
+   background-color: #2F8A60;
+   border-bottom: solid 10px #d5e7df;
+   padding: 10px;
+   color: var(--background-color);
+   border-radius: 5px 45px 0px 0px;
 }
 .organizations{
   font-size: 10pt;
   border: 0.5px gray solid;
   background-color: #eaf3ef;
   border-spacing: 8px 15px;
+  height: fit-content;
 }
 .organizations .item{
   display: table-row;
 }
 .organizations .item .logo{
   margin-right: 10px;
-}
-
-.logo{
   float: left;
   width: 80px;
 }
+
 
 .report-col{
   margin-top: 20px;
@@ -92,6 +91,7 @@
   vertical-align: top;
   display: inline-block;
   margin-left: 2%;
+  height: fit-content;
 }
 .report-header{
  height: 60px;
@@ -103,14 +103,12 @@
  border-radius: 5px 45px 0px 0px;
 }
 .report{
-  height: inherit;
   background-color: #f3eaee;
   border: 0.5px gray solid;
   padding: 10px;
-}
-#dynamic_section #diary .body{
   height: 300px;
 }
+
 #dynamic_section li{
   list-style: none;
 }
@@ -138,7 +136,8 @@
 #dynamic_section .body{
   font-size: 85%;
   overflow: auto;
-  min-height: 280px;
+  max-height: 250px;
+  min-height: 250px;
 }
 #dynamic_section .body .item_title{
   text-align: right;
@@ -170,9 +169,8 @@
     width: 60px;
   }
   .report-col{
-    margin-top: 70px;
     width:70%;
-    float:right;
+    margin-left: 30%;
   }
 
   .contacts .item{
@@ -198,6 +196,7 @@
     width:100%;
   }
   .report-col{
+    margin-left: 0%;
     width:100%;
   }
 
@@ -214,7 +213,7 @@
   .contacts{
     margin-top: 7%;
     margin-left: 5%;
-    width: 40%;
+    width: 45%;
     display: inline-block;
   }
   .contacts .item{

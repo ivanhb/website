@@ -1,7 +1,11 @@
 
 var sections = (function () {
 
-  function fixed(section="home") {
+  function footer() {
+    $("#section_structure").after("<footer></footer>");
+  }
+
+  function head(section="home") {
     var active = "";
     if (section == "home") {
       active = "active";
@@ -50,14 +54,13 @@ var sections = (function () {
                var an_item_html = "<div class='bio_contacts'>"+normalize_contacts(bio_obj["contacts"])+"</div>";
 
                $(".contacts").html("<div>"+an_item_html+"</div>");
+               //Build Dynamic Sections
+               if ("dynamic_section" in my_config) {
+                 build_dynamic_section(my_config["dynamic_section"]);
+               }
              }
            }
     });
-
-    //Build Dynamic Sections
-    if ("dynamic_section" in my_config) {
-      build_dynamic_section(my_config["dynamic_section"]);
-    }
   }
 
   function projects(){
@@ -168,7 +171,8 @@ var sections = (function () {
   }
 
   return {
-    fixed: fixed,
+    head: head,
+    footer: footer,
     homepage: homepage,
     projects: projects,
     activities: activities,
