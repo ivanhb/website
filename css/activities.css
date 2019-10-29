@@ -131,7 +131,7 @@
     border-bottom: 0.5px gray dashed!important;
   }
   .boxes .item-info{
-    display: block;
+    display: flex;
     border-top: none!important;
     padding-bottom: 2px;
     padding-top: 8px;
@@ -141,10 +141,14 @@
     height: 40px;
   }
   .boxes .item-info .keywords{
+    order: 1;
     padding-top: 0px;
+    display: inline-block;
     width: 50%;
   }
   .boxes .item-info .attached{
+    order: 2;
+    float: none;
     display: inline-block;
     width: 50%;
     margin-bottom: 1px;
