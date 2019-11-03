@@ -76,7 +76,7 @@ var sections = (function () {
               var an_item_obj = data["items"][i];
 
               var an_item_html = "<div class='title'>"+an_item_obj["name"]+"</div>";
-              an_item_html += "<div class='date'>"+date_to_status(an_item_obj["date"])+"</div>";
+              an_item_html += "<div class='date'>"+an_item_obj["start_date"]+" - "+an_item_obj["end_date"]+"</div>";
               an_item_html += "<div class='description'>"+an_item_obj["description"]+"</div>";
               an_item_html += "<div class='people'>"+normalize_people(an_item_obj["people"])+"</div>";
               an_item_html += "<div class='achievements'>"+normalize_achievements(an_item_obj["achievements"])+"</div>";
@@ -113,7 +113,7 @@ var sections = (function () {
 
               var an_item_html = "<div class='title'>"+an_item_obj["name"]+"</div>";
               an_item_html += "<div class='location'>"+an_item_obj["location"]+"</div>";
-              an_item_html += "<div class='date'>"+normalize_date_range(an_item_obj["date"])+"</div>";
+              an_item_html += "<div class='date'>From "+an_item_obj["start_date"]+" to "+an_item_obj["end_date"]+"</div>";
               an_item_html += "<div class='contribution'>"+an_item_obj["contribution"]+"</div>";
               an_item_html += "<div class='description'>"+an_item_obj["description"]+"</div>";
 

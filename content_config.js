@@ -43,27 +43,6 @@ var my_config = {
   ]
 }
 
-
-function normalize_date_range(date_range){
-  if (date_range == null) {
-    return date_range;
-  }
-  var date_range_parts = date_range.split("-");
-  //console.log(date_range_parts);
-  for (var i = 0; i < date_range_parts.length; i++) {
-    date_range_parts[i] = normalize_date(date_range_parts[i]);
-  }
-  var str_splitter = "";
-  var str_date_range = "";
-  if (date_range_parts.length > 0) {
-    str_date_range = date_range_parts[0];
-  }
-  if (date_range_parts.length > 1) {
-    str_date_range = str_date_range + "  to "+ date_range_parts[1];
-  }
-  return str_date_range;
-}
-
 function normalize_people(d) {
   var str_to_return = "";
   for (var i = 0; i < d.length; i++) {
@@ -86,22 +65,6 @@ function normalize_achievements(d) {
   return str_to_return;
 }
 
-function date_to_status(d) {
-  var str_date = "";
-  if (d != "") {
-      var second_date = d.split("-")[1];
-      var second_date_parts = second_date.split("/");
-      var d_to = new Date(second_date_parts[2], second_date_parts[1] - 1, second_date_parts[0])
-      var cur_date = new Date();
-      if(d_to > cur_date) {
-        str_date = "Ongoing (until: "+normalize_date(second_date)+")";
-      }else {
-        str_date = "Finished";
-      }
-  }
-  return str_date;
-}
-
 function normalize_date(d) {
   // e.g. 02/15/2017
   const months = {
@@ -121,38 +84,25 @@ function normalize_date(d) {
 
   var str_date = "";
   if (d != "") {
-      var d_parts = d.split("/");
-      if(d_parts.length > 1){
-        d_parts[1] = months[d_parts[1]];
-      }
-      for (var i = d_parts.length - 1; i >= 0; i--) {
-        str_date = " "+d_parts[i] + str_date;
+      if (d == "ongoing"){
+        str_date = "ongoing";
+      }else {
+        var d_parts = d.split("/");
+        if(d_parts.length > 1){
+          d_parts[1] = months[d_parts[1]];
+        }
+        for (var i = d_parts.length - 1; i >= 0; i--) {
+          str_date = " "+d_parts[i] + str_date;
+        }
       }
   }
   return str_date;
 }
+
 function normalize_md_to_html(str_md){
   var md = new Remarkable();
   var html_str = md.render(str_md);
   return html_str;
-}
-
-//*must return an array of values*//
-function normalize_filter_date(val){
-  //05/07/2018
-  var res = [];
-  var parts = val.split("-");
-  for (var i = 0; i < parts.length; i++) {
-    var _year = _get_year(parts[i]);
-    if (res.indexOf(_year) == -1) {
-      res.push(_year);
-    }
-  }
-  return res;
-  function _get_year(val_date) {
-    var parts = val.split("/");
-    return parts[parts.length-1];
-  }
 }
 
 function normalize_keywords(elems){
@@ -244,7 +194,6 @@ function normalize_contacts(elems) {
   return elems_html;
 }
 
-
 function last_diary(diary_obj) {
   var items = diary_obj["items"];
   if (items.length > 0) {
@@ -252,7 +201,6 @@ function last_diary(diary_obj) {
   }
   return -1;
 }
-
 
 function report_handler(an_item) {
   //{"content": , "date": }
