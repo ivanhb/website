@@ -4,11 +4,10 @@
   --link-hover-color: #92b2e5;
   --separator-color: #DDDDDD;
   --background-color: #DDDDDD;
-;
 }
 .hide-it{
-    background-color: transparent;
-    border: none;
+  background-color: transparent!important;
+  border: none!important;
 }
 
 .nav-item{
