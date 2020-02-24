@@ -15,7 +15,6 @@ var layout_config = {
   }
 }
 
-
 var my_config = {
   'BASE': "https://ivanhb.github.io/",
   'WEBSITE_BASE': "https://ivanhb.github.io/website/",
