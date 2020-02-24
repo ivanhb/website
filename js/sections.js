@@ -9,6 +9,9 @@ var sections = (function () {
     var active = "";
     if (section == "home") {
       active = "active";
+      $("#section_structure").removeClass("hide-it");
+    }else {
+      $("#section_structure").addClass("hide-it");
     }
     var nav_html = '<a class="nav-item item '+active+'" href="'+layout_config.homepage+'">Home</a>';
     active = "";

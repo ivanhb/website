@@ -6,6 +6,10 @@
   --background-color: #DDDDDD;
 ;
 }
+.hide-it{
+    background-color: transparent;
+    border: none;
+}
 
 .nav-item{
   margin-top: 20px;
