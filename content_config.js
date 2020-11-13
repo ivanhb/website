@@ -210,6 +210,7 @@ function report_handler(an_item) {
 
   var match;
   var content = [];
+  console.log(an_item["html_content"]);
   while((match = regex.exec(an_item["html_content"])) !== null) {
       //console.log(match[1]);
       content.push(match[1]);
@@ -251,7 +252,6 @@ function build_dynamic_section(dynamic_sec_obj) {
           //dataType: "html",
           async: true,
           success: function(data) {
-            console.log(data);
             var normalize_item = {"date": an_item["date"], "html_content": data}
             var normalized_item = Reflect.apply(handler,undefined,[normalize_item]);
 
