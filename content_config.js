@@ -210,9 +210,10 @@ function report_handler(an_item) {
 
   var match;
   var content = [];
-  console.log(an_item["html_content"]);
+  //console.log(an_item["html_content"]);
   while((match = regex.exec(an_item["html_content"])) !== null) {
-      //console.log(match[1]);
+      console.log(match[0]);
+      console.log(match[1]);
       content.push(match[1]);
   }
   var normalized_item = {
