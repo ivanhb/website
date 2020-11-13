@@ -206,7 +206,7 @@ function report_handler(an_item) {
   //console.log(an_item);
   //const regex = /<h2 id=\".*\"\>(.*)\<a.*><\/h2>/gm;
   //const regex = /<h2.*id=\".*\".*\>(.*)<\/h2>/gm
-  const regex = /##(.*)\n/gm
+  const regex = /^\#\#(.*)\n/gm
 
   var match;
   var content = [];
@@ -248,9 +248,10 @@ function build_dynamic_section(dynamic_sec_obj) {
     $.ajax({
           type: "GET",
           url: an_item["link"],
-          dataType: "html",
+          //dataType: "html",
           async: true,
           success: function(data) {
+            console.log(data);
             var normalize_item = {"date": an_item["date"], "html_content": data}
             var normalized_item = Reflect.apply(handler,undefined,[normalize_item]);
 
