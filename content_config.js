@@ -212,11 +212,9 @@ function report_handler(an_item) {
   var parser = new DOMParser();
   var content = [];
   var html_elem;
-  //console.log(an_item["html_content"]);
   while((match = regex.exec(an_item["html_content"])) !== null) {
 	    var html_elem = parser.parseFromString(match[0], 'text/html').body;
       console.log(html_elem.innerHTML);
-      console.log(match[1]);
       content.push(match[1]);
   }
   var normalized_item = {
