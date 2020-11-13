@@ -206,7 +206,7 @@ function report_handler(an_item) {
   //console.log(an_item);
   //const regex = /<h2 id=\".*\"\>(.*)\<a.*><\/h2>/gm;
   const regex = /<h2.*id=\".*\".*\>(.*)<\/h2>/gm
-  regex = /##.*\n/
+  regex = /##.*\n/gm
 
   var match;
   var content = [];
