@@ -209,10 +209,13 @@ function report_handler(an_item) {
   //const regex = /^\#\#(.*)\n/gm
 
   var match;
+  var parser = new DOMParser();
   var content = [];
+  var html_elem;
   //console.log(an_item["html_content"]);
   while((match = regex.exec(an_item["html_content"])) !== null) {
-      console.log(match[0]);
+	    var html_elem = parser.parseFromString(match[0], 'text/html').body;
+      console.log(html_elem.innerHTML);
       console.log(match[1]);
       content.push(match[1]);
   }
