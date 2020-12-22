@@ -40,7 +40,7 @@
   border-bottom: #b7babd solid 1px;
 }
 .boxes .item-info{
-  font-size: 11pt;
+  font-size: 10pt;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-right: 10px;
@@ -49,7 +49,7 @@
   border-left: dotted 0.1px lightgray;
 }
 .boxes .item-info .title{
-  font-size: 13pt;
+  font-size: 12pt;
   padding-bottom: 5px;
 }
 .boxes .item-info.alternate{
@@ -96,7 +96,7 @@
     border-radius: 0px 0px 15px 15px;
   }
   .boxes .itemslist-header{
-    font-size: 12pt;
+    font-size: 11pt;
     height: 40px;
   }
   .boxes .item-info .keywords{
