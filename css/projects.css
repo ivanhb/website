@@ -1,89 +1,17 @@
-
-.boxes{
-  margin-top: 0px;
-  width: 100%;
-  height: fit-content;
-  border-spacing: 5px 0px;
-  border-collapse: separate;
-}
-
-.boxes .itemslist-header{
-  visibility: hidden;
- height: 45px;
- font-size: 140%;
- background-color: #4d535c;
- border-bottom: solid 10px #b7babd;
- padding-left: 10px;
- color: var(--background-color);
- border-radius: 5px 45px 3px 3px;
-}
-.boxes .itemlist-header{}
-.boxes .separator.tr{
-  height: 10px;
-}
-
-
 .boxes .item{
-  vertical-align: top;
-  padding-bottom: 30px;
-  padding-top: 20px;
-  padding-right: 12px;
-}
-.boxes .item.alternate{
-  background-color: #eaeaea;
-  border-top: #b7babd solid;
-  border-bottom: #b7babd solid;
-}
-.boxes .item-info{
-  font-size: 90%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 10px;
-  padding-left: 10px;
-  vertical-align: bottom;
-}
-.boxes .item-info .title{
-  font-size: 110%;
-  padding-bottom: 8px;
-}
-.boxes .item-info.alternate{
-  background-color: #eaeaea;
-  border-top: #b7babd solid;
-  border-bottom: #b7babd solid;
-}
-.boxes .item-info .item-link{
-  text-align: center;
-}
-.boxes .item-info .separator{
-  text-align: center;
-  font-size: 10px;
-}
-.boxes .item-info .keywords{
-  vertical-align: bottom;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  text-align: left;
-}
-.boxes .item-info .keywords i{
-  padding-left:5px;
-  padding-right:5px;
-  font-size: 5px;
-}
-
-
-.boxes .item .title{
-  font-size: 130%;
   border-left: #2296EE solid 4px;
-  padding-left: 10px;
+}
+.boxes .item .title{
+  font-size: 16pt;
 }
 .boxes .item .date{
-  font-size: 120%;
+  font-size: 14pt;
   color: gray;
   margin-bottom: 10px;
-  border-left: #2296EE solid 4px;
   padding-left: 10px;
 }
 .boxes .item .description{
+  font-size: 12pt;
   margin-bottom: 10px;
   padding-left: 15px;
 }
@@ -91,39 +19,33 @@
   margin-bottom: 10px;
   padding-left: 15px;
 }
+.boxes .item .people li{
+  font-size: 12pt;
+  margin: 2px;
+  background-color: rgba(255,255,255,0.3);
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.1px solid rgba(0,0,0,0.08);
+  width: fit-content;
+}
 .boxes .item .subtitle{
-  font-size: 120%;
-  padding-bottom: 3px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  font-size: 14pt;
 }
 .boxes .item .achievements{
   padding-left: 15px;
+  display: none;
 }
 
-
 @media only screen and (max-width: 1200px) {
-  body{
-    font-size: 95%;
-  }
-  .boxes{
-    border-spacing: 0px 5px;
-    border-collapse: collapse;
-  }
   .boxes .item{
-    margin-top: 10px;
-    display: block;
-    border-bottom: 0.5px gray dashed!important;
+    border-left: #2296EE solid 4px;
   }
   .boxes .item-info{
-    display: block;
-    border-top: none!important;
-    padding-bottom: 2px;
-    padding-top: 8px;
+    border-left: #2296EE solid 4px;
   }
-  .boxes .itemslist-header{
-    font-size: 12pt;
-    height: 40px;
-  }
-  .boxes .item-info .keywords{
-    padding-top: 0px;
+  .boxes .item-info.alternate{
+    border-left: #2296EE solid 4px;
   }
 }

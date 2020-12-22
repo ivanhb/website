@@ -1,0 +1,106 @@
+
+.boxes{
+  margin-top: 0px;
+  width: 100%;
+  height: fit-content;
+  border-spacing: 0px 12px;
+  border-collapse: separate;
+}
+
+.boxes .itemslist-header{
+  visibility: hidden;
+ height: 45px;
+ font-size: 18pt;
+ background-color: rgba(77,83,92,0.8);
+ padding-left: 10px;
+ color: white;
+ border-radius: 15px 45px 45px 15px;
+}
+.boxes .itemlist-header{}
+.boxes .separator.tr{
+  height: 10px;
+  display: none;
+}
+
+.boxes .item{
+  vertical-align: middle;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 12px;
+  border-radius: 15px 0px 0px 15px;
+}
+.boxes .item .title{
+  font-size: 14pt;
+  padding-left: 10px;
+  display: inline-block;
+}
+.boxes .item.alternate{
+  background-color: #eaeaea;
+  border-top: #b7babd solid 1px;
+  border-bottom: #b7babd solid 1px;
+}
+.boxes .item-info{
+  font-size: 11pt;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  vertical-align: bottom;
+  border-left: dotted 0.1px lightgray;
+}
+.boxes .item-info .title{
+  font-size: 13pt;
+  padding-bottom: 5px;
+}
+.boxes .item-info.alternate{
+  background-color: #eaeaea;
+  border: #b7babd solid 1px;
+  border-radius: 0px 15px 15px 0px;
+  border-left: dotted 0.1px lightgray;
+}
+.boxes .item-info .keywords i{
+  padding-left:5px;
+  padding-right:5px;
+  font-size: 3px;
+}
+.boxes .item-info .keywords{
+  padding-bottom: 10px!important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .boxes{
+    border-spacing: 0px 5px;
+    border-collapse: collapse;
+  }
+  .boxes .itemslist-header{
+     border-radius: 15px 15px 15px 15px;
+     text-align: center;
+     font-size: 15pt!important;
+    }
+  .boxes .item{
+    margin-top: 10px;
+    display: block;
+    border-bottom: 0.5px #b7babd dashed!important;
+    border-radius: 15px 15px 0px 0px;
+    border: 1px solid #b7babd;
+  }
+  .boxes .item-info{
+    display: block;
+    border-top: none!important;
+    padding-bottom: 2px;
+    padding-top: 8px;
+    border-radius: 0px 0px 15px 15px;
+    border: 1px solid #b7babd;
+  }
+  .boxes .item-info.alternate{
+    border-radius: 0px 0px 15px 15px;
+  }
+  .boxes .itemslist-header{
+    font-size: 12pt;
+    height: 40px;
+  }
+  .boxes .item-info .keywords{
+    padding-top: 0px!important;
+    padding-bottom: 10px!important;
+  }
+}

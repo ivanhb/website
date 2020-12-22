@@ -12,7 +12,7 @@
 
 .nav-item{
   margin-top: 20px;
-  font-size: 12pt;
+  font-size: 14pt!important;
   float: right;
 }
 #menu_logo img{
@@ -38,12 +38,12 @@
 }
 
 body{
-  font-family: Georgia, Times, "Times New Roman";
+  font-family: Arvo;
   font-size: 12pt;
   padding-top: 2%;
-  margin-bottom: 40px;
   margin-right: 8%;
   margin-left: 8%;
+  min-height: 800px;
 }
 
 body a{
@@ -74,7 +74,7 @@ footer{
   bottom: 0;
 }
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 1100px) {
 
   #section_structure{
     background-color: transparent;

@@ -108,7 +108,8 @@ function normalize_keywords(elems){
   var elems_html = "";
   if (elems != undefined) {
     for (var i = 0; i < elems.length; i++) {
-      elems_html += "#"+elems[i];
+      //elems_html += "#"+elems[i];
+      elems_html += elems[i];
       if (i < elems.length -1) {
         elems_html += "<i class='circle icon'></i>";
       }
