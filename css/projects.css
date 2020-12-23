@@ -2,16 +2,16 @@
   border-left: #2296EE solid 4px;
 }
 .boxes .item .title{
-  font-size: 16pt;
+  font-size: 15pt;
 }
 .boxes .item .date{
-  font-size: 14pt;
+  font-size: 13pt;
   color: gray;
   margin-bottom: 10px;
   padding-left: 10px;
 }
 .boxes .item .description{
-  font-size: 12pt;
+  font-size: 11pt;
   margin-bottom: 10px;
   padding-left: 15px;
 }
@@ -20,7 +20,7 @@
   padding-left: 15px;
 }
 .boxes .item .people li{
-  font-size: 12pt;
+  font-size: 11pt;
   margin: 2px;
   background-color: rgba(255,255,255,0.3);
   padding: 5px;
@@ -31,7 +31,7 @@
 .boxes .item .subtitle{
   padding-top: 5px;
   padding-bottom: 2px;
-  font-size: 14pt;
+  font-size: 13pt;
 }
 .boxes .item .achievements{
   padding-left: 15px;

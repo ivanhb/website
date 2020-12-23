@@ -2,7 +2,7 @@
   border-left: #ee7a22 solid 4px;
 }
 .boxes .item .title{
-  font-size: 14pt;
+  font-size: 15pt;
 }
 .boxes .item-info .attached{
   width: 100%;
@@ -23,12 +23,12 @@
 }
 
 .boxes .item .location{
-  font-size: 12pt;
+  font-size: 13pt;
   color: gray;
   padding-left: 10px;
 }
 .boxes .item .date{
-  font-size: 12pt;
+  font-size: 13pt;
   color: gray;
   margin-bottom: 10px;
   padding-left: 10px;
@@ -48,7 +48,7 @@
   padding-left: 15px;
 }
 .boxes .item .subtitle{
-  font-size: 12pt;
+  font-size: 13pt;
   padding-bottom: 3px;
 }
 

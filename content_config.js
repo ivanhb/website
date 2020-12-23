@@ -3,9 +3,10 @@ var layout_config = {
   'homepage': "https://ivanhb.github.io/website/",
   'pages_dir': "https://ivanhb.github.io/website/page/",
   "nav_menu": {
+    "bio": {title: "Short Biography", link: "bio.html"},
     "projects": {title: "Projects", link: "projects.html"},
     "activities": {title: "Activities", link: "activities.html"},
-    "publications": {title: "Publications", link: "publications.html"},
+    "publications": {title: "Publications", link: "publications.html"}
   },
   "dynamic_section": {
     //in pixels
@@ -27,6 +28,10 @@ var my_config = {
     }
   ],
   'section':[
+      {
+        'id': 'bio',
+        'source': 'https://ivanhb.github.io/edu/index/bio.json'
+      },
       {
         'id': 'projects',
         'source': 'https://ivanhb.github.io/edu/index/project.json'

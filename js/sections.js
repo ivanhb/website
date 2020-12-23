@@ -35,6 +35,7 @@ var sections = (function () {
     $("#menu_nav").html(nav_html);
 
     $( "#menu_nav_logo" ).click(function() {
+          $("#menu_nav_list").toggle();
 
           if ($("#menu_nav_list").html() == "") {
             $("#menu_nav_list").html($("#menu_nav").html());
@@ -61,6 +62,25 @@ var sections = (function () {
                if ("dynamic_section" in my_config) {
                  build_dynamic_section(my_config["dynamic_section"]);
                }
+             }
+           }
+    });
+  }
+
+  function shortbio() {
+    $.ajax({
+           type: "GET",
+           url: "https://ivanhb.github.io/edu/index/bio.json",
+           dataType: "json",
+           error: function() {},
+           success: function(data) {
+             if ("items" in data) {
+               var bio_obj = data["items"][0];
+               var description = bio_obj["description"];
+               var image = "<img class='prof-img ui circular image img-thumbnail bordered' src='"+bio_obj["image"]+"'>";
+               $("#bio_description").html(description);
+               $("#bio_img").html(image);
+               $("#others_elems").html("<div class='bio_contacts'>"+normalize_contacts(bio_obj["contacts"])+"</div>");
              }
            }
     });
@@ -177,6 +197,7 @@ var sections = (function () {
     head: head,
     footer: footer,
     homepage: homepage,
+    shortbio: shortbio,
     projects: projects,
     activities: activities,
     publications: publications

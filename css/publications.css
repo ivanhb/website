@@ -2,6 +2,10 @@
   border-left: #F4D03F solid 4px;
 }
 
+.boxes .item .title{
+  font-size: 13pt;
+}
+
 .boxes .item .link{
   font-size: 12pt;
   margin: 8px;

@@ -1,0 +1,98 @@
+.boxes .itemslist-header{
+  visibility: visible;
+  border-radius: 15px 0px 0px 15px;
+  width: 300px;
+}
+
+.description-header{
+  width: 50%;
+  background-color: rgba(77,83,92,0.8);
+  border-radius: 0px 45px 45px 0px;
+}
+.col-1{
+  text-align: center;
+  border: #b7babd solid 1px;
+  border-right: none;
+  border-radius: 15px 0px 0px 15px;
+  background-color: #eaeaea;
+  border-left: rgba(77,83,92,0.8) solid 4px;
+}
+.col-2{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: #b7babd solid 1px;
+  border-left: none;
+  border-right: none;
+  background-color: #eaeaea;
+}
+.col-3{
+  border: #b7babd solid 1px;
+  border-left: dotted 0.1px lightgray;
+  border-radius: 0px 15px 15px 0px;
+  background-color: #eaeaea;
+  padding: 20px;
+}
+.col-3{
+  vertical-align: bottom;
+}
+
+.col-3 #others_elems .item {
+  font-size: 11pt;
+  margin: 2px;
+  margin-top: 10px!important;
+  background-color: rgba(255,255,255,0.3);
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.1px solid rgba(0,0,0,0.08)!important;
+}
+#bio_img{
+  max-width: 240px;
+  margin: 0 auto;
+  vertical-align: top;
+  display: inline-block;
+  padding: 7px;
+  background-color: #eaeaea;
+}
+#bio_description{
+  display: inline-block;
+  padding: 20px;
+  padding-top: 0px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .boxes .itemslist-header{
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  .separator.tr{
+    display: table-row!important;
+    height: 10px!important;
+  }
+  .col-1{
+    display: table-row;
+    border-radius: 15px 0px 0px 15px;
+    border-left: none;
+    border: solid 1px #b7babd !important;
+    border-bottom: none!important;
+  }
+  .col-2{
+    display: table-row;
+    border: none!important;
+    border-right: solid 1px #b7babd !important;
+    border-left: solid 1px #b7babd !important;
+  }
+  .col-3{
+    display: table-row;
+    border: solid 1px #b7babd !important;
+    border-top: none!important;
+  }
+  .col-3 #others_elems .item {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: none;
+    margin-bottom: 20px;
+  }
+}

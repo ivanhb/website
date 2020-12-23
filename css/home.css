@@ -44,8 +44,8 @@
   text-align:left;
   width: 100%;
   padding: 10px;
-  background-color: #F1F1F1;
-  border: solid 1px rgba(77,83,92,0.3);
+  background-color: rgba(244,244,244);
+  border: solid 1px rgba(77,83,92,0.4);
   border-radius: 15px;
 }
 .contacts .item{
@@ -53,7 +53,7 @@
   border: solid 1px rgba(77,83,92,0.3);
   font-size: 11pt;
   border-radius: 10px;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.8);
   padding: 5px;
   border-radius: 5px;
   border: 0.1px solid rgba(0,0,0,0.08);;
@@ -72,22 +72,21 @@
 .organizations-header{
    font-size: 15pt;
    text-align: center;
-   background-color: rgba(47,138,96,0.8);
+   background-color: rgba(67,149,111,1);
    padding: 10px;
    color: white;
-   border-radius: 45px 45px 0px 0px;
-   border: solid 1px rgba(77,83,92,0.3);
+   border-radius: 15px 15px 0px 0px;
 }
 .organizations{
   font-size: 10pt;
-  background-color: #eaf3ef;
-  border-spacing: 8px 15px;
   height: fit-content;
-  border-radius: 0px 0px 10px 10px;
-  border: solid 1px rgba(77,83,92,0.3);
+  border-radius: 0px 0px 15px 15px;
+  border: solid 1px rgba(67,149,111,1);
+  background-color: rgba(67,149,111,1);
   border-collapse: separate;
   padding: 15px;
   padding-top: 0px;
+  margin-bottom: 20px;
 }
 .organizations .item{
   display: block;
@@ -130,13 +129,13 @@
  background-color: rgba(212,105,105,1);
  padding: 10px;
  color: white;
- border-radius: 45px 45px 0px 0px;
+ border-radius: 15px 15px 0px 0px;
 }
 .report{
-  background-color: #f3eaee;
-  border: solid 1px rgba(77,83,92,0.3);
+  background-color: rgba(212,105,105,1);
+  border: solid 1px rgba(212,105,105,1);
   padding: 10px;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 15px 15px;
 }
 
 #dynamic_section li{
@@ -168,7 +167,7 @@
   overflow: auto;
   max-height: 250px;
   min-height: 250px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.7);
   border: 1px solid rgba(0,0,0,0.08);
   padding: 10px;
   border-radius: 5px;
@@ -223,6 +222,7 @@
     margin: 0 auto!important;
   }
   .contacts{
+    visibility: hidden;
     width: 100%;
     border-radius: 10px 10px 10px 10px;
   }
@@ -230,9 +230,11 @@
     text-align: center;
   }
   .contacts .item{
+    visibility: visible;
     display: inline-block;
-    padding: 10px;
+    padding: 14px;
     margin-left: 10px;
+    border: 1px solid rgba(0,0,0,0.25);
   }
   .contacts .item .after-logo{
     display: none;

@@ -12,7 +12,7 @@
 
 .nav-item{
   margin-top: 20px;
-  font-size: 12pt!important;
+  font-size: 13pt!important;
   float: right;
 }
 #menu_logo img{
@@ -29,12 +29,16 @@
   float: right;
   border: none;
   background-color: transparent;
-}
-#menu_nav_logo{
   font-size: 20pt;
+  color: rgba(44,44,44,0.9);
 }
 #menu_nav_list{
+  border-radius: 5px;
   display: none;
+  padding: 5px;
+}
+#menu_nav_list .item{
+  margin-left: 0px;
 }
 
 body{
@@ -98,7 +102,6 @@ footer{
     float: left;
   }
   #menu_nav_list{
-    display: block;
     background-color: #E5E7E9;
     width: 100%;
     padding-right: 5px;
