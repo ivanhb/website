@@ -8,15 +8,39 @@
 }
 
 .boxes .itemslist-header{
-  visibility: hidden;
+ visibility: hidden;
  height: 45px;
- font-size: 18pt;
- background-color: rgba(77,83,92,0.8);
+ padding-bottom: 40px;
+ font-size: 20pt;
+ /*background-color: rgba(77,83,92,0.8);*/
  padding-left: 10px;
- color: white;
+ color: rgba(77,83,92,1);
  border-radius: 15px 45px 45px 15px;
 }
-.boxes .itemlist-header{}
+.boxes .itemslist-header div{
+  display: inline-block;
+}
+.boxes .itemslist-header .category{
+  display: inline-block;
+  margin-left: 30px;
+  margin-right: 20px;
+  font-size: 15pt;
+}
+.boxes .itemslist-header .category + .category{
+  margin-left: 0px;
+}
+.boxes .itemslist-header .category::before{
+}
+.boxes .itemslist-header .category a{
+  color: rgba(77,83,92,0.8);
+}
+.boxes .itemslist-header .category a:hover{
+  cursor: pointer;
+}
+.boxes .itemslist-header .category .active{
+  border-bottom: solid;
+  opacity: 1;
+}
 .boxes .separator.tr{
   height: 10px;
   display: none;
@@ -75,7 +99,7 @@
   .boxes .itemslist-header{
      border-radius: 15px 15px 15px 15px;
      text-align: center;
-     font-size: 15pt!important;
+     font-size: 20pt!important;
     }
   .boxes .item{
     margin-top: 10px;

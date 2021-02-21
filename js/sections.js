@@ -104,7 +104,8 @@ var sections = (function () {
               an_item_html += "<div class='people'>"+normalize_people(an_item_obj["people"])+"</div>";
               an_item_html += "<div class='achievements'>"+normalize_achievements(an_item_obj["achievements"])+"</div>";
 
-              var an_item_info_html = "<div class='keywords'><div class='title'>Keywords:</div>"+normalize_keywords(an_item_obj["keywords"])+"</div>";
+              var an_item_info_html = "<div class='attached'>"+normalize_attached(an_item_obj["attached"])+"</div>";
+              an_item_info_html += "<div class='keywords'><div class='title'>Keywords:</div>"+normalize_keywords(an_item_obj["keywords"])+"</div>";
               if (i%2 == 1) {
                 an_item_html = "<td class='item'>"+an_item_html+"</td>";
                 an_item_info_html = "<td class='item-info'>"+an_item_info_html+"</td>";
@@ -129,8 +130,11 @@ var sections = (function () {
         dataType: "json",
         error: function() {},
         success: function(data) {
-
           if ("items" in data) {
+
+            var cat = get_sec_conf('activities')['category'];
+            var tabs = {}
+
             for (var i = 0; i < data["items"].length; i++) {
               var an_item_obj = data["items"][i];
 
@@ -151,10 +155,38 @@ var sections = (function () {
                 an_item_info_html = "<td class='item-info alternate'>"+an_item_info_html+"</td>";
               }
 
-              $(".boxes tr:last").after("<tr>"+an_item_html+an_item_info_html+"</tr>");
-              //display header
-              $(".boxes .itemslist-header").css("visibility","visible");
+              if (cat != undefined) {
+                if (!(an_item_obj[cat]["value"] in tabs)) {
+                  tabs[an_item_obj[cat]["value"]] = {"label": an_item_obj[cat]["label"], "rows": ""};
+                }
+                tabs[an_item_obj[cat]["value"]]["rows"] += "<tr class='tab-row'>"+an_item_html+an_item_info_html+"</tr>";
+              }else {
+                $(".boxes tr:last").after("<tr>"+an_item_html+an_item_info_html+"</tr>");
+                //display header
+                $(".boxes .itemslist-header").css("visibility","visible");
+              }
             }
+
+            if (Object.keys(tabs).length > 0){
+              layout_config["nav_menu"]["activities"]["tabs"] = tabs;
+              var header_tabs_html = "";
+              for(var cat_obj in tabs) {
+                header_tabs_html += "<span class='category'><a value='"+cat_obj+"'>"+tabs[cat_obj]["label"]+"</a></span>";
+              }
+              $(".boxes .itemslist-header div:last").after("<span class='tab-sep'>:</span>"+header_tabs_html);
+              $(".boxes .itemslist-header").css("visibility","visible");
+              $( ".boxes .itemslist-header .category a" ).on( "click", function() {
+                $( ".boxes .itemslist-header .category a" ).removeClass( "active" );
+                $( this ).addClass( "active" );
+                $(".boxes tr.tab-row").remove();
+                var tab_key = $( this ).attr("value");
+                var tab_obj = layout_config["nav_menu"]["activities"]["tabs"][tab_key];
+                //console.log( $( this ).attr("value"));
+                $(".boxes tr:last").after(tab_obj["rows"]);
+              });
+              $( ".boxes .itemslist-header .category a:first" ).click();
+            }
+
           }
         }
      });

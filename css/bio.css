@@ -5,6 +5,7 @@
 }
 
 .description-header{
+  display: none;
   width: 50%;
   background-color: rgba(77,83,92,0.8);
   border-radius: 0px 45px 45px 0px;

@@ -38,7 +38,9 @@ var my_config = {
       },
       {
         'id': 'activities',
-        'source': 'https://ivanhb.github.io/edu/index/activity.json'
+        'source': 'https://ivanhb.github.io/edu/index/activity.json',
+        //use the attribute "type" to build several tabs
+        'category': 'type'
       },
       {
         'id': 'publications',
